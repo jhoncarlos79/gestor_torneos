@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
     'users',
     'deportes',
     'jugadores',
@@ -57,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'gestor_torneos.urls'
@@ -154,3 +157,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Avisamos al framework que utilizaremos nuestro modelo de usuarios para autenticarse
 
 AUTH_USER_MODEL = 'users.User'
+
+#Permisos de acceso de otra aplicacion
+
+CORS_ORIGIN_ALLOW_ALL = True
