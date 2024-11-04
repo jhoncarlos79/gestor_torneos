@@ -5,4 +5,4 @@ from partidos.models import Partido
 @admin.register(Partido)
 
 class PartidoAdmin(admin.ModelAdmin):
-    list_display=['id_partido', 'fecha', 'hora', 'lugar', 'id_torneo']
+    list_display=['id_partido', 'fecha', 'hora', 'lugar', 'id_torneo', 'id_equipo1', 'resultado_equipo1', 'id_equipo2', 'resultado_equipo2']

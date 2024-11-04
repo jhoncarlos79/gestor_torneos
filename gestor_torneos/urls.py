@@ -27,7 +27,7 @@ from equipos.api.router import router_equipos
 from inscripciones.api.router import router_inscripciones
 from jugadores.api.router import router_jugadores
 from partidos.api.router import router_partidos
-from resultados.api.router import router_resultados
+#from resultados.api.router import router_resultados
 from torneos.api.router import router_torneos
 
 schema_view = get_schema_view(
@@ -53,7 +53,7 @@ urlpatterns = [
     path('api', include(router_inscripciones.urls)),
     path('api', include(router_jugadores.urls)),
     path('api', include(router_partidos.urls)),
-    path('api', include(router_resultados.urls)),
+    #path('api', include(router_resultados.urls)),
     path('api', include(router_torneos.urls))   
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
